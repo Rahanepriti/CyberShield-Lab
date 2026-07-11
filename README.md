@@ -1,99 +1,274 @@
-# 🛡 CyberShield Lab
+# CyberShield Lab
 
-CyberShield Lab is a Flask-based web application developed to demonstrate cybersecurity concepts, secure authentication, and common web security practices.
+A Flask-based cybersecurity web application developed to demonstrate secure authentication, REST APIs, role-based access control, secure file handling, and OWASP web security concepts.
+
+> **Purpose:** This project was built to strengthen practical cybersecurity skills for Security Analyst / SOC Analyst roles by implementing common security controls used in real-world web applications.
 
 ---
 
-## Features
+# 📸 Screenshots
 
-- User Registration & Login
+## Login Page
+
+![Login](docs/images/login.png)
+
+---
+
+## SOC Dashboard
+
+![Dashboard](docs/images/dashboard.png)
+
+---
+
+## Registered Users
+
+![Users](docs/images/users.png)
+
+---
+
+## Search User
+
+![Search User](docs/images/search-user.png)
+
+---
+
+## Secure File Upload
+
+![Upload](docs/images/upload.png)
+
+---
+
+## JWT Authentication (Postman)
+
+![JWT Login](docs/images/jwt-login.png)
+
+---
+
+## Protected API Response
+
+![API Users](docs/images/api-users.png)
+
+---
+
+# ✨ Features
+
+- User Registration
+- Secure Login & Logout
 - Password Hashing
 - Session Management
 - Role-Based Access Control (RBAC)
 - JWT Authentication
-- Secure REST APIs
+- REST API Development
 - Secure File Upload
-- Dashboard
+- User Dashboard
 - User Management
-- Search User
-- Security Logging
+- Search Users
+- Security Event Logging
 
 ---
 
-## Security Features
+# 🔒 Security Features
 
+## Authentication
+
+- Secure password hashing
+- Session-based authentication
+- JWT Authentication for APIs
+
+## Authorization
+
+- Role-Based Access Control (Admin/User)
+- Protected routes
+
+## Web Security
+
+- CSRF Protection
+- Security Headers
+- Rate Limiting
 - SQL Injection Prevention
 - XSS Demonstration
-- CSRF Protection
-- Rate Limiting
-- Security Headers
-- Secure Password Storage
-- Secure File Validation
+
+## File Upload Security
+
+- File Type Validation
+- Image Verification using Pillow
+- Randomized File Names
+- Maximum File Size Restriction
 
 ---
 
-## Technologies Used
+# 🛠 Technologies Used
 
-- Python
-- Flask
-- SQLite
-- HTML
-- CSS
-- JavaScript
-- Postman
-- Pillow
+| Technology | Purpose |
+|------------|----------|
+| Python | Backend |
+| Flask | Web Framework |
+| SQLite | Database |
+| HTML | Frontend |
+| CSS | Styling |
+| JavaScript | Client-side functionality |
+| Flask-JWT-Extended | JWT Authentication |
+| Flask-WTF | CSRF Protection |
+| Flask-Limiter | Rate Limiting |
+| Pillow | Image Validation |
+| Postman | API Testing |
+| Git & GitHub | Version Control |
 
 ---
 
-## Project Structure
+# 📂 Project Structure
 
 ```
 CyberShieldLab/
 │
 ├── app.py
+├── database.py
 ├── requirements.txt
 ├── README.md
-├── users.db
+│
 ├── templates/
+│
 ├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── docs/
+│   └── images/
+│
+├── logs/
 ├── uploads/
-└── logs/
+│
+└── view_users.py
 ```
 
 ---
 
-## Installation
+# 🚀 Installation
+
+Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Rahanepriti/CyberShield-Lab.git
+```
 
-cd CyberShieldLab
+Move into the project directory
 
+```bash
+cd CyberShield-Lab
+```
+
+Create a virtual environment
+
+```bash
 python3 -m venv venv
+```
 
+Activate the environment
+
+Linux
+
+```bash
 source venv/bin/activate
+```
 
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
+Run the application
+
+```bash
 python app.py
 ```
 
 ---
 
-## Security Modules
+# 🔑 API Endpoints
+
+## Login
+
+```
+POST /api/login
+```
+
+Returns a JWT access token.
+
+---
+
+## Get Users
+
+```
+GET /api/users
+```
+
+Requires:
+
+```
+Authorization: Bearer <JWT_TOKEN>
+```
+
+---
+
+# 🔍 Security Concepts Demonstrated
 
 - Authentication
 - Authorization
-- JWT
-- RBAC
-- Secure Upload
+- Password Hashing
+- JWT Authentication
+- REST APIs
+- Secure File Upload
 - SQL Injection Prevention
-- XSS Protection
-- CSRF Protection
+- Cross-Site Request Forgery (CSRF)
+- Cross-Site Scripting (XSS) Awareness
+- Security Headers
+- Rate Limiting
 - Security Logging
 
 ---
 
-## Author
+# 🎯 Learning Outcomes
+
+This project helped me gain practical experience with:
+
+- Flask Web Development
+- Secure Authentication
+- API Development
+- Security Best Practices
+- OWASP Top 10 Awareness
+- Incident Logging
+- Role-Based Access Control
+- Git & GitHub Workflow
+- Postman API Testing
+
+---
+
+# 🔮 Future Improvements
+
+- Password Reset
+- Email Verification
+- Two-Factor Authentication (2FA)
+- SIEM Integration
+- Audit Log Export
+- Docker Deployment
+
+---
+
+# 👩‍💻 Author
 
 **Priti Rahane**
+
+- GitHub: https://github.com/Rahanepriti
+- Project: https://github.com/Rahanepriti/CyberShield-Lab
+
+---
+
+## ⭐ If you found this project useful, consider giving it a Star.
