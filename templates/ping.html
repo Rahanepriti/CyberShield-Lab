@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ping Utility</title>
+</head>
+<body>
+
+<h2>Ping Host</h2>
+
+<form method="POST">
+
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <input
+        type="text"
+        name="ip"
+        placeholder="Enter IP">
+
+    <button type="submit">
+        Ping
+    </button>
+
+</form>
+
+<hr>
+
+<pre>{{ output }}</pre>
+
+</body>
+</html>

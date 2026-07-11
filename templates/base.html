@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>CyberShield Lab</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+
+        <h2>🛡 CyberShield</h2>
+
+        <a href="{{ url_for('soc_dashboard') }}">🏠 Dashboard</a>
+
+        <a href="{{ url_for('view_users') }}">👥 Users</a>
+
+        <a href="{{ url_for('upload') }}">📤 Upload</a>
+        
+        <a href="{{ url_for('search_user') }}">🔍Search User</a>
+
+        <a href="#">📜 Security Logs</a>
+
+        <a href="#">🔌 API Playground</a>
+
+        <a href="{{ url_for('logout') }}">🚪 Logout</a>
+
+    </div>
+
+    <div class="content">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+</div>
+
+        
+</body>
+
+</html>

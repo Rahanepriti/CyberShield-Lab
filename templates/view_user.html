@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Profile</title>
+</head>
+
+<body>
+
+<h2>User Profile</h2>
+
+{% if user %}
+
+<p><strong>ID:</strong> {{ user[0] }}</p>
+<p><strong>Username:</strong> {{ user[1] }}</p>
+<p><strong>Email:</strong> {{ user[2] }}</p>
+<p><strong>Role:</strong> {{ user[3] }}</p>
+
+{% else %}
+
+<h3>User not found</h3>
+
+{% endif %}
+
+</body>
+
+</html>

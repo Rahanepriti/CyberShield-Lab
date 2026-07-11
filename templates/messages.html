@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Messages</title>
+</head>
+
+<body>
+
+<hr>
+
+<a href="/dashboard">Dashboard</a> |
+<a href="/profile">Profile</a> |
+<a href="/messages">Messages</a> |
+<a href="/search-user">Search User</a> |
+<a href="/security-labs">Security Labs</a> |
+<a href="/logout">Logout</a>
+
+<hr>
+
+<h2>CyberShield Message Board</h2>
+
+<form method="POST">
+
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <textarea
+        name="message"
+        rows="5"
+        cols="50"
+        placeholder="Write your message"></textarea>
+
+    <br><br>
+
+    <button type="submit">
+        Post
+    </button>
+
+</form>
+
+<hr>
+
+<h2>Messages</h2>
+
+{% for msg in messages %}
+
+<div style="border:1px solid black;padding:10px;margin:10px;">
+
+<b>{{ msg[0] }}</b>
+
+<br><br>
+
+{{ msg[1]|safe }}
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>

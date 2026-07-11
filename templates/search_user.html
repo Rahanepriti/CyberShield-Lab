@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>🔍Search User</h2>
+
+<br>
+
+<form method="POST">
+
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <input
+        type="text"
+        name="username"
+        placeholder="Enter username"
+        required>
+
+    <button type="submit">
+        🔍Search
+    </button>
+
+</form>
+
+<br>
+
+{% if users %}
+
+<h3>Search Results</h3>
+
+<table class="users-table">
+
+<tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Role</th>
+</tr>
+
+{% for user in users %}
+
+<tr>
+    <td>{{ user[0] }}</td>
+    <td>{{ user[1] }}</td>
+    <td>{{ user[2] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>SOC Dashboard</h1>
+
+<br>
+
+<div class="cards">
+
+<div class="card">
+<h2>👥 Users</h2>
+<p>{{ total_users }}</p>
+</div>
+
+<div class="card">
+<h2>✅ Success</h2>
+<p>{{ success_logins }}</p>
+</div>
+
+<div class="card">
+<h2>❌ Failed</h2>
+<p>{{ failed_logins }}</p>
+</div>
+
+<div class="card">
+<h2>📤 Uploads</h2>
+<p>{{ total_uploads }}</p>
+</div>
+
+</div>
+
+<br>
+
+<div class="logs">
+
+<h2>Recent Security Events</h2>
+
+<br>
+
+{% for log in logs %}
+
+<div class="log">
+
+{{ log }}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

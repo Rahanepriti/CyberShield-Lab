@@ -1,22 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>login</title>
+
+    <meta charset="UTF-8">
+
+    <title>CyberShield Login</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/login.css') }}">
+
 </head>
+
 <body>
-<h1>CyberShieldLab Login</h1>
-<form action="/login" method="POST">
-<label>Username</label><br>
-<input type="text" name="username" required><br><br>
 
-<label>Password</label><br>
-<input type="password" name="password" required><br><br>
+<div class="login-box">
 
-<button type="submit">Login</button>
+    <h1>🛡 CyberShield Lab</h1>
 
-</form>
-<hr>
+    <p>Security Operations Platform</p>
 
-<a href="/"">Home</a>
+    <form action="{{ url_for('login') }}" method="POST">
+
+        <label>Username</label>
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter Username"
+            required>
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required>
+
+        <button type="submit">
+
+            Login
+
+        </button>
+
+    </form>
+
+</div>
+
 </body>
+
 </html>
