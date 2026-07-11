@@ -1,3 +1,13 @@
-users.db
+venv/
 __pycache__/
 *.pyc
+
+users.db
+
+logs/*
+!logs/.gitkeep
+
+uploads/*
+!uploads/.gitkeep
+
+.env
